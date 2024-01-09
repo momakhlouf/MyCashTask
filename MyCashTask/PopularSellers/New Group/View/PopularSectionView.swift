@@ -16,46 +16,15 @@ struct PopularSectionView: View {
             LazyHStack(alignment: .top){
                 ForEach(popularSellers){ restaurant in
                     
-                    ImageLoadingView(urlString:  restaurant.image, width: 160, height: 140)
+                    ImageLoadingView(urlString:  restaurant.image, width: 168, height: 152)
                         .overlay{
                             VStack(alignment:.leading){
-                                Button(action: {
-                                    print(isFavorite.description)
-                                    isFavorite.toggle()
-                                }, label: {
-#warning("heart click")
-                                    Image(systemName: isFavorite ? "heart.fill" : "heart")
-                                        .foregroundStyle(.customYellow)
-                                        .padding()
-                                    
-                                })
+                                favoriteButton(restaurant: restaurant)
                                 Spacer()
                                 VStack(alignment: .center, spacing: 2){
-                                    Text(restaurant.name)
-                                        .font(.system(size: 16).bold())
-                                    
-                                    HStack(spacing: 2){
-                                        Image(.mapIcon)
-                                            .resizable()
-                                            .foregroundStyle(Color.customLightYellow)
-                                            .frame(width:8, height:8)
-                                        if restaurant.distance == "0"{
-                                            Text("N/A")
-                                        }else{
-                                            Text("\(restaurant.distance ?? "") KM")
-                                        }
-                                    }
-                                    .font(.system(size: 8).bold())
-                                    
-                                    
-                                    
-                                    HStack(spacing: 2){
-                                        RatingView(rating: Int(restaurant.rate ?? "") ?? 0)
-                                        if let rate = restaurant.rate {
-                                            Text(rate)
-                                                .font(.system(size: 8))
-                                        }
-                                    }
+                                    restaurantName(restaurant: restaurant)
+                                    distanceView(restaurant: restaurant)
+                                    rateView(restaurant: restaurant)
                                 }
                                 .padding(5)
                                 .foregroundStyle(.customLightYellow)
@@ -66,14 +35,55 @@ struct PopularSectionView: View {
                             }
                         }
                         .cornerRadius(20)
-                    
                 }
             }
-            
         }
     }
 }
 
 #Preview {
     PopularSectionView(popularSellers: [])
+}
+
+extension PopularSectionView{
+    func favoriteButton(restaurant: PopularSeller) -> some View{
+        Button(action: {
+            //isFavorite.toggle()
+        }, label: {
+            //  saving fav not working - not in the task, so all now is true
+            Image(systemName: restaurant.isFavorite ?? true ? "heart.fill" : "heart")
+                .foregroundStyle(.customYellow)
+                .padding()
+        })
+    }
+    
+    func restaurantName(restaurant: PopularSeller) -> some View{
+        Text(restaurant.name)
+            .font(.system(size: 16).bold())
+    }
+    
+    func distanceView(restaurant: PopularSeller) -> some View{
+        HStack(spacing: 2){
+            Image(.mapIcon)
+                .resizable()
+                .foregroundStyle(Color.customLightYellow)
+                .frame(width:8, height:8)
+            if restaurant.distance == "0"{
+                Text("N/A")
+            }else{
+                Text("\(restaurant.distance ?? "") KM")
+            }
+        }
+        .font(.system(size: 10).bold())
+    }
+    
+    func rateView(restaurant: PopularSeller) -> some View{
+        HStack(spacing: 2){
+            RatingView(rating: Int(restaurant.rate ?? "") ?? 0)
+            if let rate = restaurant.rate {
+                Text(rate)
+                    .font(.system(size: 10))
+            }
+        }
+    }
 }

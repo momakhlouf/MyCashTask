@@ -33,6 +33,17 @@
 		A86B6C492B4C6C0A00FC1D61 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C482B4C6C0A00FC1D61 /* Category.swift */; };
 		A86B6C4B2B4C7F2700FC1D61 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C4A2B4C7F2700FC1D61 /* SearchBarView.swift */; };
 		A86B6C4D2B4C806900FC1D61 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C4C2B4C806900FC1D61 /* UIApplication.swift */; };
+		A86B6C682B4D27AB00FC1D61 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C672B4D27AB00FC1D61 /* Registration.swift */; };
+		A86B6C6C2B4D2B8700FC1D61 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C6B2B4D2B8700FC1D61 /* SignIn.swift */; };
+		A86B6C6F2B4D3B7300FC1D61 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A86B6C6E2B4D3B7300FC1D61 /* Localizable.xcstrings */; };
+		A86B6C732B4D531900FC1D61 /* SignButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C722B4D531900FC1D61 /* SignButtonModifier.swift */; };
+		A86B6C762B4D5D0E00FC1D61 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C752B4D5D0E00FC1D61 /* UserManager.swift */; };
+		A86B6C7C2B4D72C800FC1D61 /* ClientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C7B2B4D72C800FC1D61 /* ClientResponse.swift */; };
+		A86B6C7E2B4D72F500FC1D61 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C7D2B4D72F500FC1D61 /* ProfileViewModel.swift */; };
+		A86B6C802B4D766900FC1D61 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C7F2B4D766900FC1D61 /* ProfileView.swift */; };
+		A86B6C822B4DA88900FC1D61 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C812B4DA88900FC1D61 /* BackButton.swift */; };
+		A86B6C862B4DB72500FC1D61 /* SignInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C852B4DB72500FC1D61 /* SignInFormView.swift */; };
+		A86B6C882B4DD7DB00FC1D61 /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C872B4DD7DB00FC1D61 /* SignUpFormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +74,17 @@
 		A86B6C482B4C6C0A00FC1D61 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A86B6C4A2B4C7F2700FC1D61 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		A86B6C4C2B4C806900FC1D61 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		A86B6C672B4D27AB00FC1D61 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		A86B6C6B2B4D2B8700FC1D61 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		A86B6C6E2B4D3B7300FC1D61 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		A86B6C722B4D531900FC1D61 /* SignButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignButtonModifier.swift; sourceTree = "<group>"; };
+		A86B6C752B4D5D0E00FC1D61 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		A86B6C7B2B4D72C800FC1D61 /* ClientResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientResponse.swift; sourceTree = "<group>"; };
+		A86B6C7D2B4D72F500FC1D61 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		A86B6C7F2B4D766900FC1D61 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A86B6C812B4DA88900FC1D61 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		A86B6C852B4DB72500FC1D61 /* SignInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormView.swift; sourceTree = "<group>"; };
+		A86B6C872B4DD7DB00FC1D61 /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,14 +118,17 @@
 			isa = PBXGroup;
 			children = (
 				A86B6C042B4B0F0000FC1D61 /* MyCashTaskApp.swift */,
-				A86B6C152B4B0F5200FC1D61 /* Services */,
+				A86B6C6D2B4D3B3C00FC1D61 /* Localization */,
+				A86B6C742B4D5CF200FC1D61 /* UserManager */,
 				A86B6C182B4B165E00FC1D61 /* Helper */,
+				A86B6C152B4B0F5200FC1D61 /* Services */,
 				A86B6C522B4CA9CD00FC1D61 /* SignIn */,
 				A86B6C572B4CAA0B00FC1D61 /* SignUp */,
 				A86B6C562B4CAA0900FC1D61 /* Home */,
 				A86B6C552B4CAA0600FC1D61 /* Categories */,
 				A86B6C602B4CAAD300FC1D61 /* PopularSellers */,
 				A86B6C5F2B4CAAD000FC1D61 /* TrendingSellers */,
+				A86B6C772B4D70EC00FC1D61 /* Profile */,
 				A86B6C082B4B0F0100FC1D61 /* Assets.xcassets */,
 				A86B6C0A2B4B0F0100FC1D61 /* Preview Content */,
 			);
@@ -135,6 +160,8 @@
 				A86B6C382B4BEB2800FC1D61 /* RatingView.swift */,
 				A86B6C4C2B4C806900FC1D61 /* UIApplication.swift */,
 				A86B6C4A2B4C7F2700FC1D61 /* SearchBarView.swift */,
+				A86B6C722B4D531900FC1D61 /* SignButtonModifier.swift */,
+				A86B6C812B4DA88900FC1D61 /* BackButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -142,6 +169,7 @@
 		A86B6C522B4CA9CD00FC1D61 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				A86B6C6A2B4D2B2500FC1D61 /* Model */,
 				A86B6C542B4CA9E200FC1D61 /* View */,
 				A86B6C532B4CA9DF00FC1D61 /* ViewModel */,
 			);
@@ -160,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A86B6C1F2B4B3D4B00FC1D61 /* SignInView.swift */,
+				A86B6C852B4DB72500FC1D61 /* SignInFormView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +215,7 @@
 		A86B6C572B4CAA0B00FC1D61 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				A86B6C692B4D2AE700FC1D61 /* Model */,
 				A86B6C582B4CAA1C00FC1D61 /* View */,
 				A86B6C592B4CAA2600FC1D61 /* ViewModel */,
 			);
@@ -196,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				A86B6C162B4B0F7000FC1D61 /* SignUpView.swift */,
+				A86B6C872B4DD7DB00FC1D61 /* SignUpFormView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +349,72 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A86B6C692B4D2AE700FC1D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C672B4D27AB00FC1D61 /* Registration.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A86B6C6A2B4D2B2500FC1D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C6B2B4D2B8700FC1D61 /* SignIn.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A86B6C6D2B4D3B3C00FC1D61 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C6E2B4D3B7300FC1D61 /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		A86B6C742B4D5CF200FC1D61 /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C752B4D5D0E00FC1D61 /* UserManager.swift */,
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
+		A86B6C772B4D70EC00FC1D61 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C7A2B4D710100FC1D61 /* View */,
+				A86B6C792B4D70FF00FC1D61 /* Model */,
+				A86B6C782B4D70FC00FC1D61 /* ViewModel */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A86B6C782B4D70FC00FC1D61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C7D2B4D72F500FC1D61 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A86B6C792B4D70FF00FC1D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C7B2B4D72C800FC1D61 /* ClientResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A86B6C7A2B4D710100FC1D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A86B6C7F2B4D766900FC1D61 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +457,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = A86B6BF82B4B0F0000FC1D61;
 			productRefGroup = A86B6C022B4B0F0000FC1D61 /* Products */;
@@ -378,6 +476,7 @@
 			files = (
 				A86B6C0C2B4B0F0100FC1D61 /* Preview Assets.xcassets in Resources */,
 				A86B6C092B4B0F0100FC1D61 /* Assets.xcassets in Resources */,
+				A86B6C6F2B4D3B7300FC1D61 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +488,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86B6C472B4C54B200FC1D61 /* PopularSellersViewModel.swift in Sources */,
+				A86B6C6C2B4D2B8700FC1D61 /* SignIn.swift in Sources */,
+				A86B6C762B4D5D0E00FC1D61 /* UserManager.swift in Sources */,
+				A86B6C732B4D531900FC1D61 /* SignButtonModifier.swift in Sources */,
 				A86B6C372B4BE2C200FC1D61 /* ImageLoadingView.swift in Sources */,
 				A86B6C332B4BD9D000FC1D61 /* SectionHeaderView.swift in Sources */,
 				A86B6C452B4C548900FC1D61 /* CategoriesViewModel.swift in Sources */,
@@ -396,17 +498,24 @@
 				A86B6C3B2B4BEF8A00FC1D61 /* CategoriesSectionView.swift in Sources */,
 				A86B6C4B2B4C7F2700FC1D61 /* SearchBarView.swift in Sources */,
 				A86B6C262B4B57EC00FC1D61 /* HomeView.swift in Sources */,
+				A86B6C7C2B4D72C800FC1D61 /* ClientResponse.swift in Sources */,
 				A86B6C172B4B0F7000FC1D61 /* SignUpView.swift in Sources */,
+				A86B6C682B4D27AB00FC1D61 /* Registration.swift in Sources */,
 				A86B6C2C2B4BB5A900FC1D61 /* HomeViewModel.swift in Sources */,
 				A86B6C242B4B45C600FC1D61 /* SignInViewModel.swift in Sources */,
 				A86B6C352B4BE0D400FC1D61 /* PopularSectionView.swift in Sources */,
 				A86B6C282B4BB06600FC1D61 /* PopularSellers.swift in Sources */,
+				A86B6C882B4DD7DB00FC1D61 /* SignUpFormView.swift in Sources */,
+				A86B6C802B4D766900FC1D61 /* ProfileView.swift in Sources */,
 				A86B6C2A2B4BB16C00FC1D61 /* Service.swift in Sources */,
+				A86B6C862B4DB72500FC1D61 /* SignInFormView.swift in Sources */,
 				A86B6C432B4C547600FC1D61 /* TrendingSellersViewModel.swift in Sources */,
 				A86B6C4D2B4C806900FC1D61 /* UIApplication.swift in Sources */,
 				A86B6C222B4B45B000FC1D61 /* SignUpViewModel.swift in Sources */,
 				A86B6C202B4B3D4B00FC1D61 /* SignInView.swift in Sources */,
+				A86B6C822B4DA88900FC1D61 /* BackButton.swift in Sources */,
 				A86B6C052B4B0F0000FC1D61 /* MyCashTaskApp.swift in Sources */,
+				A86B6C7E2B4D72F500FC1D61 /* ProfileViewModel.swift in Sources */,
 				A86B6C392B4BEB2800FC1D61 /* RatingView.swift in Sources */,
 				A86B6C3F2B4C4DCA00FC1D61 /* TrendingSellers.swift in Sources */,
 				A86B6C3D2B4BFF6700FC1D61 /* TrendingSectionView.swift in Sources */,
@@ -551,8 +660,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,8 +689,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,6 +8,7 @@
 import Foundation
 
 enum APIError : Error {
+    case invalidURL
     case decodingError
     case errorCode(Int)
     case unknown
@@ -16,6 +17,8 @@ enum APIError : Error {
 extension APIError : LocalizedError {
     var errorDescription: String?{
         switch self {
+        case .invalidURL:
+            return ""
         case .decodingError :
             return "Failed to decode the object from the service"
         case .errorCode(let code) :

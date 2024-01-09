@@ -15,12 +15,12 @@ struct TrendingSectionView: View {
             LazyHStack(alignment: .top){
                 ForEach(trendingSellers){ restaurant in
                     VStack(spacing: 0){
-                        ImageLoadingView(urlString: restaurant.image ?? "", width: 60, height: 60)
+                        ImageLoadingView(urlString: restaurant.image ?? "", width: 64, height: 51)
                     }
-                    .frame(width:120,height: 100)
+                    .frame(width:136,height: 109)
                     .background(Color.white)
                     .cornerRadius(20)
-                    .shadow(radius: 1 , x: 0.0 , y: 1)
+                    .shadow(color: Color.gray.opacity(0.2), radius: 4, x: 0, y: 0)
                     .padding(.bottom)
                    // .padding(5)
 

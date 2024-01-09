@@ -12,6 +12,8 @@ class PopularSellersViewModel: ObservableObject{
     
     @Published var popularSellers: [PopularSeller] = []
     @Published var searchText: String = ""
+    @Published private var isFavorite: Bool = false
+
     var filteredPopularSeller: [PopularSeller]{
         guard !searchText.isEmpty else{
             return popularSellers

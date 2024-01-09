@@ -27,7 +27,7 @@ extension RatingView{
             ForEach(1..<6){ index in
                 Image(systemName: rating >= index ? "star.fill" : "star")
                     .resizable()
-                    .frame(width: 6, height: 6)
+                    .frame(width: 10, height: 10)
                     .foregroundStyle(.customLightYellow)
                 
                 //MARK: - THIS IS FOR INTERACTING BUT DEPEND ON API , WE CAN USE IT IN THE RESTAURANT DETAILS NOT HERE

@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct MyCashTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            if UserManager.shared.isAuthenticated{
+                HomeView()
+            }else{
+                SignInView()
+            }
         }
     }
 }

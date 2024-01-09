@@ -11,12 +11,12 @@ struct CategoriesSectionView: View {
     let categories: [Category]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
-            LazyHStack(alignment: .top){
+            LazyHStack(alignment: .top, spacing: 15){
                 ForEach(categories){ category in
                     VStack(spacing: 0){
                         HStack{
                             Spacer()
-                            ImageLoadingView(urlString: category.image , width: 70, height: 70)
+                            ImageLoadingView(urlString: category.image , width: 79, height: 67)
                         }
                         HStack{
                             Text(category.nameEn.capitalized)
@@ -24,13 +24,12 @@ struct CategoriesSectionView: View {
                                 .foregroundStyle(.customGray)
                             Spacer()
                         }
-                        
                     }
                     .padding()
                     .frame(width:130,height: 100)
                     .background(Color.white)
-                    .cornerRadius(20)
-                    .shadow(radius: 1 , x: 0.0 , y: 1)
+                    .cornerRadius(12)
+                    .shadow(color: Color.gray.opacity(0.2), radius: 4, x: 0, y: 0)
                     .padding(.bottom, 5)
                 }
             }

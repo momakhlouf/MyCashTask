@@ -1,0 +1,300 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " " : {
+
+    },
+    "%@ KM" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كم"
+          }
+        }
+      }
+    },
+    "A list of categories view" : {
+
+    },
+    "A list of popular restaurants view" : {
+
+    },
+    "A list of trending restaurants view" : {
+
+    },
+    "Cart" : {
+
+    },
+    "Confirm Password" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تأكيد الرقم السري"
+          }
+        }
+      }
+    },
+    "Don't have an account?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ليس لديك حساب؟ "
+          }
+        }
+      }
+    },
+    "Email" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البريد الالكتروني"
+          }
+        }
+      }
+    },
+    "Forget the password ?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسيت الرقم السري؟"
+          }
+        }
+      }
+    },
+    "Have an account?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لديك حساب؟"
+          }
+        }
+      }
+    },
+    "Hello, %@" : {
+
+    },
+    "Home" : {
+
+    },
+    "Just for log out" : {
+
+    },
+    "Log In" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ادخل"
+          }
+        }
+      }
+    },
+    "LOG IN" : {
+
+    },
+    "Log Out" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل الخروج"
+          }
+        }
+      }
+    },
+    "Login" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الدخول"
+          }
+        }
+      }
+    },
+    "Message" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رسالة"
+          }
+        }
+      }
+    },
+    "N/A" : {
+
+    },
+    "Name" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاسم"
+          }
+        }
+      }
+    },
+    "Ok" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حسنا"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حسنا"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرقم السري"
+          }
+        }
+      }
+    },
+    "Password don't match" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرقم السري غير متطابق"
+          }
+        }
+      }
+    },
+    "Passwords don't match" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرقم السري غير متطابق"
+          }
+        }
+      }
+    },
+    "phone Number" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رقم الموبايل"
+          }
+        }
+      }
+    },
+    "Profile" : {
+
+    },
+    "Search for food..." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ابحث عن طعام"
+          }
+        }
+      }
+    },
+    "Setting" : {
+
+    },
+    "Sign Up" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل"
+          }
+        }
+      }
+    },
+    "SIGN UP" : {
+
+    },
+    "View all" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزيد"
+          }
+        }
+      }
+    },
+    "Write 8 character at least" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتب ٨ ارقام على الاقل"
+          }
+        }
+      }
+    },
+    "Write 14 character" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتب ١٤ حرف"
+          }
+        }
+      }
+    },
+    "Write your email" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتب البريد الالكتروني"
+          }
+        }
+      }
+    },
+    "Write your Number" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتب رقم الموبايل"
+          }
+        }
+      }
+    },
+    "Write your password again" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اكتب الرقم السري مره اخرى"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
