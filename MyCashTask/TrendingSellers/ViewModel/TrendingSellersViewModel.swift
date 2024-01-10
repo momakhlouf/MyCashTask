@@ -11,10 +11,11 @@ import Combine
 class TrendingSellersViewModel: ObservableObject{
     @Published var trendingSellers: [TrendingSeller] = []
 
-    var service = Service()
+    var service: ServiceProtocol
     var cancellables = Set<AnyCancellable>()
 
-    init(){
+    init(service: ServiceProtocol){
+        self.service = service
         fetchTrendingSellers()
     }
     

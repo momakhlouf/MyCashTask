@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @StateObject var viewModel = ProfileViewModel()
+    @StateObject var viewModel: ProfileViewModel
+    
+    init(viewModel: ProfileViewModel){
+        _viewModel = StateObject(wrappedValue: viewModel)
+
+    }
     var body: some View {
         NavigationStack{
             VStack{
@@ -48,5 +53,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(viewModel: DependencyProvider.profileViewModel)
 }

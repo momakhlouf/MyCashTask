@@ -15,26 +15,29 @@ class SignInViewModel: ObservableObject{
     @Published var userData: LoginData?
     @Published var errorMessage: String = ""
     @Published var isAuthenticated: Bool = false
+    @Published var isLoading: Bool = false
 
-    var service = Service()
+    var service: ServiceProtocol
     var cancellables = Set<AnyCancellable>()
     
+    init(service: ServiceProtocol){
+        self.service = service
+    }
     
     func signIn(){
-
         let parameters = [
             "email": email,
             "password": password
         ]
-        
+        isLoading = true
         service.userAuthRequest(url:"https://yogahez.mountasher.online/api/login", parameters: parameters, type: LoginResponse.self)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
+                self.isLoading = false
                 switch completion {
                 case .finished:
                     break
                 case .failure(let error):
-                    print(error.localizedDescription)
                     self.errorMessage = "An error occurred. Please try again."
                 }
             }, receiveValue: { [weak self] returnedData in
@@ -53,9 +56,6 @@ class SignInViewModel: ObservableObject{
 
                 }
                 self?.userData = returnedData.data
-               
-                print(returnedData)
-                
             })
             .store(in: &cancellables)
     }

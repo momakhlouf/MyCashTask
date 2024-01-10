@@ -8,33 +8,44 @@
 import SwiftUI
 
 struct PopularSectionView: View {
-    let popularSellers: [PopularSeller]
+    @StateObject private var viewModel: PopularSellersViewModel
     @State private var isFavorite: Bool = false
+
+    init(viewModel: PopularSellersViewModel){
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false){
-            LazyHStack(alignment: .top){
-                ForEach(popularSellers){ restaurant in
+        VStack{
+            if viewModel.filteredPopularSeller.count > 0{
+                SectionHeaderView(title: "Popular Now") {
+                    Text("A list of popular restaurants view")
                     
-                    ImageLoadingView(urlString:  restaurant.image, width: 168, height: 152)
-                        .overlay{
-                            VStack(alignment:.leading){
-                                favoriteButton(restaurant: restaurant)
-                                Spacer()
-                                VStack(alignment: .center, spacing: 2){
-                                    restaurantName(restaurant: restaurant)
-                                    distanceView(restaurant: restaurant)
-                                    rateView(restaurant: restaurant)
-                                }
-                                .padding(5)
-                                .foregroundStyle(.customLightYellow)
-                                .frame(maxWidth: .infinity)
-                                .background{
-                                    Color.customGray.opacity(0.5)
+                }
+            }
+            ScrollView(.horizontal, showsIndicators: false){
+                LazyHStack(alignment: .top){
+                    ForEach(viewModel.filteredPopularSeller){ restaurant in
+                        ImageLoadingView(urlString:  restaurant.image, width: 168, height: 152)
+                            .overlay{
+                                VStack(alignment:.leading){
+                                    favoriteButton(restaurant: restaurant)
+                                    Spacer()
+                                    VStack(alignment: .center, spacing: 2){
+                                        restaurantName(restaurant: restaurant)
+                                        distanceView(restaurant: restaurant)
+                                        rateView(restaurant: restaurant)
+                                    }
+                                    .padding(5)
+                                    .foregroundStyle(.customLightYellow)
+                                    .frame(maxWidth: .infinity)
+                                    .background{
+                                        Color.customGray.opacity(0.5)
+                                    }
                                 }
                             }
-                        }
-                        .cornerRadius(20)
+                            .cornerRadius(20)
+                    }
                 }
             }
         }
@@ -42,7 +53,8 @@ struct PopularSectionView: View {
 }
 
 #Preview {
-    PopularSectionView(popularSellers: [])
+    
+    PopularSectionView(viewModel: DependencyProvider.popularSellersViewModel)
 }
 
 extension PopularSectionView{

@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct SignUpFormView: View {
-    @StateObject var viewModel = SignUpViewModel()
+    @StateObject var viewModel: SignUpViewModel
+    
+    init(viewModel: SignUpViewModel){
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         VStack{
             UnevenRoundedRectangle(topLeadingRadius: 0, bottomLeadingRadius: 40, bottomTrailingRadius: 40, topTrailingRadius: 0, style: .continuous)
@@ -67,7 +72,7 @@ struct SignUpFormView: View {
                     Alert(title: Text("Message"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("OK")))
                 }
                 .navigationDestination(isPresented: $viewModel.isAuthenticated) {
-                    HomeView()
+                    HomeView(viewModel: DependencyProvider.profileViewModel)
                         .navigationBarBackButtonHidden(true)
                 }
                 
@@ -93,12 +98,17 @@ struct SignUpFormView: View {
             UnevenRoundedRectangle(topLeadingRadius: 40, bottomLeadingRadius: 0, bottomTrailingRadius: 0, topTrailingRadius: 40, style: .continuous)
                 .foregroundStyle(Color.white)
         }
+        .overlay{
+            if viewModel.isLoading{
+                ProgressView()
+            }
+        }
     }
     
 }
 
 #Preview {
-    SignUpFormView()
+    SignUpFormView(viewModel: DependencyProvider.signUpViewModel)
 }
 
 extension SignUpFormView{

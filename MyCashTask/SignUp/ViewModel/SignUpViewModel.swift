@@ -15,19 +15,22 @@ class SignUpViewModel: ObservableObject{
     @Published var password: String = ""
     @Published var phone: String = ""
     @Published var confirmPassword: String = ""
-   // @Published var passwordsMatch: Bool = false
-    @Published var isConfirmPasswordFieldActive = false
     @Published var errorMessage: String = ""
     @Published var showAlert: Bool = false
     @Published var isAuthenticated: Bool = false
+    @Published var isLoading: Bool = false
 
     
-    var service = Service()
+    var service: ServiceProtocol
     var cancellables = Set<AnyCancellable>()
     
     var passwordsMatch: Bool {
             return password == confirmPassword
         }
+    
+    init(service: ServiceProtocol){
+        self.service = service
+    }
     
     func signUP(){
         let parameters = [
@@ -37,15 +40,15 @@ class SignUpViewModel: ObservableObject{
             "phone": phone,
             "device_token": ""
         ]
-        
+        isLoading = true
         service.userAuthRequest(url: "https://yogahez.mountasher.online/api/client-register", parameters: parameters, type: RegistrationResponse.self)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
+                self.isLoading = false
                 switch completion {
                 case .finished:
                     break
                 case .failure(let error):
-                    print("Error: \(error)")
                     self.errorMessage = "An error occurred. Please try again."
                 }
             }, receiveValue: { [weak self] returnedData in
@@ -61,7 +64,6 @@ class SignUpViewModel: ObservableObject{
                     self?.showAlert = true
                     self?.isAuthenticated = false
                 }
-                print(returnedData)
             })
             .store(in: &cancellables)
     }

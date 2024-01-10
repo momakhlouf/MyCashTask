@@ -20,10 +20,12 @@ class PopularSellersViewModel: ObservableObject{
         }
        return popularSellers.filter{$0.name.localizedCaseInsensitiveContains(searchText)}
     }
-    var service = Service()
+    
+    var service: ServiceProtocol
     var cancellables = Set<AnyCancellable>()
 
-    init(){
+    init(service: ServiceProtocol){
+        self.service = service
         fetchPopularSellers()
     }
     

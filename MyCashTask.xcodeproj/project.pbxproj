@@ -18,7 +18,6 @@
 		A86B6C262B4B57EC00FC1D61 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C252B4B57EC00FC1D61 /* HomeView.swift */; };
 		A86B6C282B4BB06600FC1D61 /* PopularSellers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C272B4BB06600FC1D61 /* PopularSellers.swift */; };
 		A86B6C2A2B4BB16C00FC1D61 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C292B4BB16C00FC1D61 /* Service.swift */; };
-		A86B6C2C2B4BB5A900FC1D61 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C2B2B4BB5A900FC1D61 /* HomeViewModel.swift */; };
 		A86B6C332B4BD9D000FC1D61 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C322B4BD9D000FC1D61 /* SectionHeaderView.swift */; };
 		A86B6C352B4BE0D400FC1D61 /* PopularSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C342B4BE0D400FC1D61 /* PopularSectionView.swift */; };
 		A86B6C372B4BE2C200FC1D61 /* ImageLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C362B4BE2C200FC1D61 /* ImageLoadingView.swift */; };
@@ -44,6 +43,7 @@
 		A86B6C822B4DA88900FC1D61 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C812B4DA88900FC1D61 /* BackButton.swift */; };
 		A86B6C862B4DB72500FC1D61 /* SignInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C852B4DB72500FC1D61 /* SignInFormView.swift */; };
 		A86B6C882B4DD7DB00FC1D61 /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B6C872B4DD7DB00FC1D61 /* SignUpFormView.swift */; };
+		A8854DF62B4E845200BACA11 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8854DF52B4E845200BACA11 /* DependencyProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,6 @@
 		A86B6C252B4B57EC00FC1D61 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A86B6C272B4BB06600FC1D61 /* PopularSellers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSellers.swift; sourceTree = "<group>"; };
 		A86B6C292B4BB16C00FC1D61 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		A86B6C2B2B4BB5A900FC1D61 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A86B6C322B4BD9D000FC1D61 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		A86B6C342B4BE0D400FC1D61 /* PopularSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSectionView.swift; sourceTree = "<group>"; };
 		A86B6C362B4BE2C200FC1D61 /* ImageLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingView.swift; sourceTree = "<group>"; };
@@ -85,6 +84,7 @@
 		A86B6C812B4DA88900FC1D61 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		A86B6C852B4DB72500FC1D61 /* SignInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFormView.swift; sourceTree = "<group>"; };
 		A86B6C872B4DD7DB00FC1D61 /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
+		A8854DF52B4E845200BACA11 /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A86B6C042B4B0F0000FC1D61 /* MyCashTaskApp.swift */,
+				A8854DF42B4E843600BACA11 /* DpendencyProvider */,
 				A86B6C6D2B4D3B3C00FC1D61 /* Localization */,
 				A86B6C742B4D5CF200FC1D61 /* UserManager */,
 				A86B6C182B4B165E00FC1D61 /* Helper */,
@@ -242,7 +243,6 @@
 		A86B6C5A2B4CAA5500FC1D61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A86B6C2B2B4BB5A900FC1D61 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -415,6 +415,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A8854DF42B4E843600BACA11 /* DpendencyProvider */ = {
+			isa = PBXGroup;
+			children = (
+				A8854DF52B4E845200BACA11 /* DependencyProvider.swift */,
+			);
+			path = DpendencyProvider;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -487,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8854DF62B4E845200BACA11 /* DependencyProvider.swift in Sources */,
 				A86B6C472B4C54B200FC1D61 /* PopularSellersViewModel.swift in Sources */,
 				A86B6C6C2B4D2B8700FC1D61 /* SignIn.swift in Sources */,
 				A86B6C762B4D5D0E00FC1D61 /* UserManager.swift in Sources */,
@@ -501,7 +510,6 @@
 				A86B6C7C2B4D72C800FC1D61 /* ClientResponse.swift in Sources */,
 				A86B6C172B4B0F7000FC1D61 /* SignUpView.swift in Sources */,
 				A86B6C682B4D27AB00FC1D61 /* Registration.swift in Sources */,
-				A86B6C2C2B4BB5A900FC1D61 /* HomeViewModel.swift in Sources */,
 				A86B6C242B4B45C600FC1D61 /* SignInViewModel.swift in Sources */,
 				A86B6C352B4BE0D400FC1D61 /* PopularSectionView.swift in Sources */,
 				A86B6C282B4BB06600FC1D61 /* PopularSellers.swift in Sources */,

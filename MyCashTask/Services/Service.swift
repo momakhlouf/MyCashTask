@@ -8,7 +8,16 @@
 import Foundation
 import Combine
 
-class Service{
+protocol ServiceProtocol{
+    func fetch<T: Decodable>(type: T.Type, url: URL) -> AnyPublisher<T, APIError>
+    func fetchCategories() -> AnyPublisher<CategoriesResponse, APIError>
+    func fetchPopularSellers() -> AnyPublisher<PopularSellersResponse, APIError>
+    func fetchTrendingSellers() -> AnyPublisher<TrendingSellersResponse, APIError>
+    func userAuthRequest<T: Decodable>(url: String, parameters: [String: String], type: T.Type) -> AnyPublisher<T, APIError>
+    func fetchUserDataByToken() -> AnyPublisher<ClientResponse, APIError>
+}
+
+class Service: ServiceProtocol{
     
     var cancellable = Set<AnyCancellable>()
     

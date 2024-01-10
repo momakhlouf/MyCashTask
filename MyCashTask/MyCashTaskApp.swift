@@ -13,7 +13,7 @@ struct MyCashTaskApp: App {
     var body: some Scene {
         WindowGroup {
             if UserManager.shared.isAuthenticated{
-                HomeView()
+                HomeView(viewModel: DependencyProvider.profileViewModel)
             }else{
                 SignInView()
             }

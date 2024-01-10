@@ -17,7 +17,7 @@ struct SignUpView: View {
                     Spacer()
                     Image(.yajhzBrand)
                          Spacer()
-                    SignUpFormView()
+                    SignUpFormView(viewModel: DependencyProvider.signUpViewModel)
                 }
             }
             .ignoresSafeArea()

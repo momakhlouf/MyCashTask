@@ -11,7 +11,7 @@ struct BackButton: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
         Image(systemName: "chevron.left")
-            .imageScale(.large)
+            .fontWeight(.bold)
             .foregroundStyle(.customYellow)
             .onTapGesture {
                 dismiss()

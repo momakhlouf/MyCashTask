@@ -14,10 +14,11 @@ class ProfileViewModel: ObservableObject{
     @Published var errorMessage: String = ""
     @Published var isNotAuthenticated: Bool = false
     
-    var service = Service()
+    var service: ServiceProtocol
     var cancellables = Set<AnyCancellable>()
     
-    init(){
+    init(service: ServiceProtocol){
+        self.service = service
         fetchUser()
     }
     

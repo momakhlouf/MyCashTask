@@ -10,11 +10,12 @@ import Combine
 
 class CategoriesViewModel: ObservableObject{
     @Published var categories: [Category] = []
-
-    var service = Service()
+  
+    var service: ServiceProtocol
     var cancellables = Set<AnyCancellable>()
 
-    init(){
+    init(service: ServiceProtocol){
+        self.service = service
         fetchCategories()
     }
     
@@ -26,7 +27,6 @@ class CategoriesViewModel: ObservableObject{
                 case .finished:
                     print("success")
                 case .failure(let error):
-                    print(error.localizedDescription)
                     print(error)
                 }
             } receiveValue: { returnedCategories in

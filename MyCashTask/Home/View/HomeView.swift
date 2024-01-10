@@ -5,15 +5,17 @@
 //  Created by Mohamed Makhlouf Ahmed on 08/01/2024.
 //
 
-#warning("DI, progress view")
-
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var popularSellersViewModel = PopularSellersViewModel()
-    @StateObject private var trendingSellersViewModel = TrendingSellersViewModel()
-    @StateObject private var categoriesViewModel = CategoriesViewModel()
-    @StateObject private var profileViewModel = ProfileViewModel()
+      
+    @StateObject private var profileViewModel: ProfileViewModel
+    @State var searchText: String = ""
+    
+       init(viewModel: ProfileViewModel) {
+           _profileViewModel = StateObject(wrappedValue: viewModel)
+
+       }
     
     var body: some View {
         NavigationStack{
@@ -36,13 +38,13 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: DependencyProvider.profileViewModel)
 }
 
 extension HomeView{
     var searchBar: some View{
         HStack(spacing: 8){
-            SearchBarView(searchText: $popularSellersViewModel.searchText)
+            SearchBarView(searchText: $searchText)
             Button{
                 // for search or focus on searchbar
             }label: {
@@ -83,29 +85,9 @@ extension HomeView{
     }
     var sections: some View{
         VStack(spacing: 15){
-            if categoriesViewModel.categories.count > 0{
-                SectionHeaderView(title: "Categories") {
-                    Text("A list of categories view")
-                }
-            }
-            CategoriesSectionView(categories: categoriesViewModel.categories)
-            
-            
-            if popularSellersViewModel.filteredPopularSeller.count > 0{
-                SectionHeaderView(title: "Popular Now") {
-                    Text("A list of popular restaurants view")
-                    
-                }
-            }
-            PopularSectionView(popularSellers: popularSellersViewModel.filteredPopularSeller)
-            
-            
-            if trendingSellersViewModel.trendingSellers.count > 0{
-                SectionHeaderView(title: "Trending Now") {
-                    Text("A list of trending restaurants view")
-                }
-            }
-            TrendingSectionView(trendingSellers: trendingSellersViewModel.trendingSellers)
+            CategoriesSectionView(viewModel: DependencyProvider.categoriesViewModel)
+            PopularSectionView(viewModel: DependencyProvider.popularSellersViewModel)
+            TrendingSectionView(viewModel: DependencyProvider.trendingViewModel)
         }
     }
     var navigationItems: some View{
@@ -117,7 +99,7 @@ extension HomeView{
             }
             
             NavigationLink {
-                ProfileView()
+                ProfileView(viewModel: DependencyProvider.profileViewModel)
                     .navigationBarBackButtonHidden(true)
             } label: {
                 Label("Setting", systemImage: "rectangle.grid.1x2")

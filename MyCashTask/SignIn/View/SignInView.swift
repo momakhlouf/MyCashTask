@@ -17,7 +17,7 @@ struct SignInView: View {
                     Spacer()
                     Image(.yajhzBrand)
                     Spacer()
-                    SignInFormView()
+                    SignInFormView(viewModel: DependencyProvider.signInViewModel)
                 }
             }
             .ignoresSafeArea()
